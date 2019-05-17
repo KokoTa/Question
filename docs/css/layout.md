@@ -24,3 +24,7 @@
 ## flex 布局
 
 1. flex + margin: auto 可以实现垂直居中。
+
+## 垂直居中
+
+[CSS Trick](https://css-tricks.com/centering-css-complete-guide/)

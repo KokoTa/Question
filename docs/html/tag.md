@@ -6,11 +6,11 @@
 
 ## video/audio
 
-1. [canplay属性和fastseek事件](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLMediaElement) 对视频的操作。
+1. [媒体元素属性和事件](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLMediaElement)
 
 2. audio 元素中当音乐切换过快时会触发错误：`Uncaught (in promise) DOMException: The play() request was interrupted by a new load request`。意思就是 play 函数无法执行，新的音乐加载请求被截断了，play() 函数返回一个 Promise，由于被截断，所以报错，而报错没有 reject 函数解决，所以就输出到了控制台。[解决方法](https://developers.google.com/web/updates/2017/06/play-request-was-interrupted)
 
-3. 可以利用 audio 的 `ended` 事件来实现歌曲下一首歌
+3. 可以利用 audio 的 `ended` 事件来实现切换下一首歌
 
 ## table
 
@@ -28,7 +28,7 @@
 
 ## viewport
 
-[viewport](https://segmentfault.com/a/1190000010746091)
+[获取屏幕的宽高](https://segmentfault.com/a/1190000010746091)
 
 ## SVG
 
@@ -37,3 +37,11 @@ SVG的 [dasharray/dashoffset](https://developer.mozilla.org/en-US/docs/Web/SVG/A
 ## input
 
 input type="file"，选择文件后，会触发 onchange 事件，可以实现自动上传功能
+
+## meta
+
+1. 在页面头部中使用 `dns-prefetch` 可以提前完成 dns 预解析，可以加快资源加载速度
+
+## script
+
+1. `<script type="module" src="index.js">` 设置 type 后可以引入包含模块化的代码

@@ -13,7 +13,11 @@
 
 4. var all = Promise.all; 后，使用 all([p1, p2]) 时会报错。原因是 Promise.all 的 this 需要指向 Promise，但这里的赋值是函数赋值，调用时 this 指向的是  window
 
-5. [原理和实现](https://juejin.im/post/5aa7868b6fb9a028dd4de672)
+5. [原理](https://juejin.im/post/5c41297cf265da613356d4ec)
+
+6. 永远要记住想要在同步代码里拿到异步结果是不可能的
+
+7. 多个 async 函数调用：forEach 执行是并发执行；for 循环继发执行；promise.all 并发执行
 
 ## Import
 

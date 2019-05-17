@@ -11,3 +11,9 @@
 ## 清除浮动
 
 [连接](https://www.jianshu.com/p/09bd5873bed4)
+
+## CSS重排重绘及其性能优化
+
+[CSS重排重绘及其性能优化](https://segmentfault.com/a/1190000000490328#articleHeader10)
+
+[CSS动画性能解释](https://github.com/ccforward/cc/issues/42)

@@ -10,7 +10,7 @@ module.exports = {
         collapsable: true,
         children: [
           '/html/tag',
-          '/html/other'
+          '/html/browser',
         ]
       },
       {
@@ -31,7 +31,6 @@ module.exports = {
           '/js/es6',
           '/js/node',
           '/js/webpack',
-          '/js/logic',
           '/js/other',
         ]
       },

@@ -20,3 +20,38 @@
   1.全局变量不会被回收
   2.局部变量会被回收，也就是函数一旦运行完以后，函数内部的东西都会被销毁
   3.只要被另外一个作用域所引用就不会被回收
+
+10. JS有两种类型：主要数据类型和引用类型（对象）。有六种主要类型：String、Number、Boolean、Symbol、Null、Undefined
+
+11. JSON.stringify 会过滤掉 Symbol 值：
+
+    ```js
+    const a = {
+      x: Symbol(),
+      y: 10
+    }
+
+    console.log(JSON.stringify(a)) // {"y":10}
+    ```
+
+12. [类型数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays)是用来操作二进制数据的一种类数组
+
+13. [数组扁平化](http://www.cnblogs.com/caihg/p/6519422.html)
+
+14. [复杂判断优化](https://juejin.im/post/5bdfef86e51d453bf8051bf8)
+
+15. 函数节流是指一定时间内js方法只跑一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。 函数防抖是指频繁触发的情况下，只有足够的空闲时间，才执行代码一次。比如生活中的坐公交，就是一定时间内，如果有人陆续刷卡上车，司机就不会开车。只有别人没刷卡了，司机才开车。
+
+16. [观察者模式和发布订阅模式有什么不同](https://www.zhihu.com/question/23486749)
+
+17. 触摸和点击事件的发生顺序为：
+
+    * touchstart
+    * 零个或多个touchmove事件，取决于手指的移动
+    * touchend
+    * mousemove
+    * mousedown
+    * mouseup
+    * click
+
+    如果 touchstart, touchmove or touchend 被取消了(preventDefault)，则不会触发后面的其他事件

@@ -1,16 +1,46 @@
 # API
 
-## encodeURIComponent
+## escape/encodeURI/encodeURIComponent
 
-[encodeURIComponent](https://www.cnblogs.com/season-huang/p/3439277.html) 用于路由编码
+```js
+// 编码字符串，不和URL有半毛钱关系，用 escape
+escape('<script>alert(1)</script>') // "%3Cscript%3Ealert%281%29%3C/script%3E"
+
+// 编码整个URL，用 encodeURI
+encodeURI('http://www.baidu.com/ a b') // "http://www.baidu.com/%20a%20b"
+
+// 编码URL参数，用 encodeURIComponent
+encodeURIComponent('a+b-c') // "a%2Bb-c"
+```
 
 ## Element.closest
 
-[Element.closest](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/closest)
+[Element.closest](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/closest)：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）
 
 ## apply
 
-[关于apply的某用法](https://stackoverflow.com/questions/39906893/how-does-function-apply-bind-work-in-the-following-code)
+```js
+// 这个函数的作用是啥？
+function spread(fn) {
+    return Function.apply.bind( fn, null );
+}
+
+// 测试代码
+spread(function (x,y) {
+  console.log(x, y, this)
+})([1,2]) // 1, 2, Window
+
+// 结论
+// Function.apply.bind(fn, null) === fn.apply(null, args)
+
+// 解析
+// 设 Function.apply 为 method
+// 即原来的式子为 method.bind(fn, null)
+// method.bind(fn, null) 会返回一个新函数 (...args) => method.call(fn, null, ...args)
+// 即式子被转换为 (...args) => (Function.apply).call(fn, null, ...args)
+// 最终式子等价于 fn.apply(null, args)
+
+```
 
 ## parseInt
 
@@ -43,6 +73,8 @@ prseInt(数).toString(进制)
 ## Intersection Observer API
 
 通过 [Intersection Observer API](http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html) 监听元素和其他元素交接，可以完成懒加载功能 [连接](https://www.zhihu.com/question/67328049)
+
+但由于兼容性原因，我们可以使用 scroll + getBoundingClientRect 的方式实现
 
 ## 浏览器路由的三种方式
 

@@ -11,3 +11,13 @@ webpack 的 [chunkFileName](http://react-china.org/t/webpack-output-filename-out
 ## loader/plugin 原理、编译优化等
 
 [链接](http://webpack.wuhaolin.cn/5%E5%8E%9F%E7%90%86/5-1%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E6%A6%82%E6%8B%AC.html)
+
+## Tree-Shaking
+
+[Tree-Shaking性能优化实践 - 原理篇](https://zhuanlan.zhihu.com/p/32554436)
+
+## AST
+
+[抽象语法树 - 1](https://juejin.im/post/5bfc21d2e51d4544313df666)
+
+[抽象语法树 - 2](https://zhuanlan.zhihu.com/p/32189701)

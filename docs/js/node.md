@@ -21,3 +21,12 @@ Node 用 Buffer 处理二进制文件，获取二进制内容时，记得设置�
 [链接](http://www.cnblogs.com/zouhao/p/4914750.html)
 
 [多进程下的 session 共享](https://www.jianshu.com/p/8a2f3757d46d)
+
+## Node 管理
+
+Alinode 暂时不支持 windows
+
+## 测试
+
+利用 [httpbin](https://httpbin.org/) 来测试自己发送的请求
+

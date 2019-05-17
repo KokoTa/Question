@@ -29,6 +29,14 @@ translate3D 会开启 GPU 加速，而普通的 translateX/Y/X 不会，移动�
 * letter-spacing 字(母)之间的间距。
 * white-space 用来格式化空白和换行符，跟 word 没关系。
 
+## 文字单行过长省略
+
+```css
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+```
+
 ## line-height
 
 line-height 对 block 元素是无效的，实际作用的是 block 内部的 text 和 inline 元素
