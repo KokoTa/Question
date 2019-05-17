@@ -58,6 +58,8 @@
 
 3. [Vue proxy](https://juejin.im/post/5bf3e632e51d452baa5f7375)
 
+4. [前端路由原理](https://github.com/kaola-fed/blog/issues/137)
+
 ## 其他
 
 1. Vue 音乐项目中的进度条拖动问题：当拖动时音乐还在播放，此时拖动进度条会产生鬼畜现象。原因是音乐的时间变化触发了进度条的 percent 变化，而拖动滚动条时也触发了 percent 变化，从而导致两者冲突，因此在拖动时要阻止 percent 的变化。
